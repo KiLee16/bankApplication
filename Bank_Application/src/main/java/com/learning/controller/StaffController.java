@@ -378,6 +378,8 @@ public class StaffController {
 
 		// temp for accountFrom
 		AccountDTO temp = from;
+		
+		request.setReason("Transfer was made by Bank agent: "+request.getStaff()+". "+request.getReason());
 
 		temp.setAccountBalance(from.getAccountBalance() - amount);
 
@@ -390,7 +392,7 @@ public class StaffController {
 		transactions.add(transaction);
 		temp.setTransactions(transactions);
 		accountService.updateAccount(from.getAccountNumber(), temp);
-
+System.out.println("Staff is: "+request.getStaff());
 		AccountDTO temp2 = to;
 		temp2.setAccountBalance(temp2.getAccountBalance() + amount);
 
