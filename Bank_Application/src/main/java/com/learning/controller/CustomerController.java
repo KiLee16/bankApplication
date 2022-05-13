@@ -152,7 +152,7 @@ public class CustomerController {
 		List<String> roles = userDetailsImpl.getAuthorities().stream().map(e -> e.getAuthority())
 				.collect(Collectors.toList());
 		// return new token
-System.out.println(signinRequest);
+		System.out.println(signinRequest);
 		UserDTO user = userService.getUserById(userDetailsImpl.getId()).orElseThrow(() -> new IdNotFoundException("Id not found"));
 		if(user.getStatus().equals(EStatus.DISABLED)) {
 			throw new UnauthrorizedException("account is disabled");
