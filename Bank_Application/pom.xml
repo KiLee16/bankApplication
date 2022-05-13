@@ -8,7 +8,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cogent</groupId>
-	<artifactId>food-delivery-app</artifactId>
+	<artifactId>bankApplicaion</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>food-delivery-app</name>
 	<description>Demo project for Spring Boot</description>
